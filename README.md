@@ -1,6 +1,6 @@
-# Covert Timing Channel Attack on OPC UA-based Industrial Control Systems
+# Covert Timing Channel Attack on OPC UA
 
-This repository hosts a demonstration of a covert timing channel attack on OPC UA-based Industrial Control Systems.
+This repository hosts a demonstration of a covert timing channel attack on OPC UA.
 
 The demonstration involves two components:
 
