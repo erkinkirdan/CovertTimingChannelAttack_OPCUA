@@ -76,7 +76,7 @@ async function main() {
         monitoredItem.on("changed", (dataValue: DataValue) => {
             let delay = Date.now() - lastChange;
             lastChange = Date.now();
-            let bit = delay > 6000 ? '0' : '1';
+            let bit = delay > 1500 ? '0' : '1';
             console.log(`Observed delay: ${delay / 1000} seconds, decoded bit: ${bit}`);
             binaryString += bit;
             if (binaryString.endsWith(delimiter)) {
