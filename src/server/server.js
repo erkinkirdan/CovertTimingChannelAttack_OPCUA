@@ -31,7 +31,7 @@ const serverSetup = async () => {
 
     function toggleX() {
         x = x === 11 ? 12 : 11;
-        let delay = (signal[currentBitIndex] === '1') ? 3000 : 9000;
+        let delay = (signal[currentBitIndex] === '1') ? 1000 : 2000;
         console.log(`Encoded delay: ${delay / 1000} seconds for bit: ${signal[currentBitIndex]}`);
         currentBitIndex = (currentBitIndex + 1) % signal.length;
         setTimeout(toggleX, delay);
