@@ -9,7 +9,7 @@ This project requires Node.js to run.
 To install the project:
 
 1. Clone the repository
-2. Install dependencies with `npm install`
+2. Install dependencies with `npm install node-opcua`
 
 ## Running
 
