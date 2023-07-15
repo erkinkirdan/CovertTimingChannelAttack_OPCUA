@@ -1,0 +1,27 @@
+{
+  "name": "CovertTimingChannelAttack_OPCUA",
+  "version": "1.0.0",
+  "description": "OPC UA-based Industrial Control Systems Covert Timing Channel Attack",
+  "main": "src/server/server.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "client": "ts-node src/client/client.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erkinkirdan/CovertTimingChannelAttack_OPCUA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erkinkirdan/CovertTimingChannelAttack_OPCUA/issues"
+  },
+  "homepage": "https://github.com/erkinkirdan/CovertTimingChannelAttack_OPCUA#readme",
+  "dependencies": {
+    "node-opcua": "^2.60.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}
