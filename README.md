@@ -7,8 +7,6 @@ The demonstration involves two components:
 - A server script that simulates an OPC UA server and encodes a secret into timing delays between notifications.
 - A client script that connects to the OPC UA server and decodes the timing delays back into the original secret.
 
-The server script (`server.js`) is written in JavaScript, and the client script (`client.ts`) is written in TypeScript.
-
 ## Installation
 
 This project requires Node.js to run.
