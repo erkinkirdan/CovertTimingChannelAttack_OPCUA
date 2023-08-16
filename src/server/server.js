@@ -23,25 +23,23 @@ const serverSetup = async () => {
     });
 
     let x = 11;
-    const secret = process.argv[2]
+    const secret = process.argv[2];
     const encodedSecret = Array.from(Buffer.from(secret)).map(e => e.toString(2).padStart(8, '0')).join('');
     const delimiter = "111111110";
     const signal = delimiter + encodedSecret;
     let currentBitIndex = 0;
 
-    function toggleX() {
+    const toggleX = () => {
         x = x === 11 ? 12 : 11;
-        let delay = (signal[currentBitIndex] === '1') ? 1000 : 2000;
+        const delay = signal[currentBitIndex] === '1' ? 1000 : 2000;
         console.log(`Encoded delay: ${delay / 1000} seconds for bit: ${signal[currentBitIndex]}`);
         currentBitIndex = (currentBitIndex + 1) % signal.length;
         setTimeout(toggleX, delay);
-    }
+    };
 
     toggleX();
 
-    function return_value() {
-        return x;
-    }
+    const return_value = () => x;
 
     namespace.addVariable({
         componentOf: device,
@@ -55,9 +53,9 @@ const serverSetup = async () => {
 
     server.start(() => {
         console.log("Server is now listening ... (press CTRL+C to stop)");
-        console.log("port ", server.endpoints[0].port);
+        console.log("port", server.endpoints[0].port);
         const endpointUrl = server.endpoints[0].endpointDescriptions()[0].endpointUrl;
-        console.log("the primary server endpoint url is ", endpointUrl);
+        console.log("The primary server endpoint URL is", endpointUrl);
     });
 };
 
